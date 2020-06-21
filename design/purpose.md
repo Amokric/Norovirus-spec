@@ -6,3 +6,10 @@ This will be done through two different frameworks:
   1. [NetLogo ](https://ccl.northwestern.edu/netlogo/)
  
   2. [PanaXea](https://pypi.org/project/PanaXea/)
+  
+  ## Structure
+  The programme can be split:
+  1. Model Class
+  2. Agent Class
+  3. Helper Class
+  
