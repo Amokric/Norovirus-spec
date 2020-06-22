@@ -12,4 +12,3 @@ This will be done through two different frameworks:
   1. Model Class
   2. Agent Class
   3. Helper Class
-  
