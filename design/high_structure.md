@@ -41,16 +41,3 @@ When the program is complete it will report:
 The school size is based off of 
 - Classroom size = 21 students
 - Number of Classrooms = 6
-
-
-# SPC-students
-partof: REQ-SUp-population
-###
-## Attributes
-
-The students will have variables, this will include if the student is infected or not, or if the said student is at school.
-
-This will include:
-- Is the student infected?
-- Is the student next to their neighbour?
-- Is the student absent?
