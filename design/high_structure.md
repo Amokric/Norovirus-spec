@@ -6,7 +6,7 @@ This will execute the model given the certain conditions.
 
 
 # REQ-SUn-network
-partof: REQ-SUp
+partof: REQ-model
 ###
 # Network Model
 
@@ -29,7 +29,7 @@ Links between friends:
 - Has to be greater or equal to 2
 
 
-# REQ-Model
+# REQ-model
 partof: REQ-Purpose
 ###
 ## Model
