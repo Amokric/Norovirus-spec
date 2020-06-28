@@ -15,4 +15,5 @@ The goal of the model is to implement two policies in order to reduce the number
   ## Structure
   
 
-- [[ REQ-SUp]] - The setup. This will initialise the model with all the details needed to run the simulation, it will include the generation of the students, the student network and for how long the simulation should run for.
+- [[ REQ-model]] - The model setup. This will initialise the model with all the details needed to run the simulation, it will include the generation of the students, the student network and for how long the simulation should run for.
+- [[ REQ-engine]]
