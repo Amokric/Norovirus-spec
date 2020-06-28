@@ -1,5 +1,12 @@
-# REQ-SUn-network
+# REQ-engine
 partof: REQ-purpose
+###
+## Engine
+This will execute the model given the certain conditions.
+
+
+# REQ-SUn-network
+partof: REQ-SUp
 ###
 # Network Model
 
@@ -22,16 +29,17 @@ Links between friends:
 - Has to be greater or equal to 2
 
 
-# REQ-SUp
+# REQ-Model
 partof: REQ-Purpose
 ###
-## Setup
+## Model
 
 
 This initialises the model with all the details need to run the simulation, as well as, generating the agents and making the connections. 
 
 When the program is complete it will report:
 - The epochs
+- If the students are at school or at home
 - The number of agents categorised by their status: "healthy", "sick" and "absent"
 
 
@@ -41,3 +49,8 @@ When the program is complete it will report:
 The school size is based off of 
 - Classroom size = 21 students
 - Number of Classrooms = 6
+
+
+# SPC-network
+partof: REQ-SUn-network
+###
