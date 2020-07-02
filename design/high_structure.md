@@ -43,17 +43,19 @@ Creating Friendship Networks:
 
 The parameters:
 
-- Group sizes
-- Average Degree
-- Average Path Length
-- Clustering Coefficient
+- Group sizes: range 3 - 8.5
+- Average Degree: 4.5
+- Average Path Length: 5.0
+- Clustering Coefficient: 0.113
 
 Links between friends:
 - Has to be greater or equal to 2
 
 
 # SPC-engine
-At the start of each simulation the following parameters were randomly assigned: the initial ‘sick’ student, the network connections of each student.
+At the start of each simulation the following parameters were randomly assigned: 
+
+In order for the simulation to commence there will need to be the initial ‘sick’ student and the network connections of each student should be set up.
 
 Each day you evaluate all the chances, therefore evaluating the chance of infection twice. This shall be when the student is in class and when the student is at lunch.
 
@@ -69,7 +71,7 @@ The conditions that the model shall meet are as follows:
 The main goal of the model is to generate the students and network so that the model can run and output the report.
 
 - [[.generate_students]]: There shall be a function which generates the students for the model. The setup for this is will require to assign the parameters for the students. 
-- [[.generate_sick_student]]: There shall be a function to generate the sick student.
+- [[.generate_sick_student]]: There will be a function to generate the "initial" sick student.
 
 
 # SPC-network
@@ -83,4 +85,12 @@ When generating the network, the friendships between the students change with th
 The network shall allow students in a classroom to have at least two neighbours besides them to be assigned.
 
 
+# TST-model
+
+
 # TST-network
+## Unit tests
+
+Make sure that the valid connections are being made between students.
+
+Each student should at least have two links in the classroom.
