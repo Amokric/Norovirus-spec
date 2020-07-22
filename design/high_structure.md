@@ -2,7 +2,12 @@
 partof: REQ-purpose
 ###
 ## Engine
-This will execute the model given the certain conditions.
+This will execute the model given certain conditions.
+
+### This model shall meet these conditions to execute the programme:
+- An "initial" sick student, which is randomyl assigned, in order to start the actual transmission of disease.
+- The network connections for the students
+- The assigned sizes for the classes and groups.
 
 
 # REQ-model
@@ -13,47 +18,53 @@ partof: REQ-Purpose
 
 This initialises the model with all the details need to run the simulation, as well as, generating the agents, generating the network and setting up the connections. 
 
-When the program is complete it will report:
-- Outbreak duration (days)
-- If the students are at school or at home
-- The number of agents categorised by their status: "healthy", "sick" and "absent"
+### Setting up the model 
 
-
-# REQ-SUn-network
-partof: REQ-model
-###
-# Network Model
+#### Network for the model:
 
 According to the paper, the network was created as a small world network in a lattice structure, allowing the student to pair with their niehgbours on either sides.
 
-## Initial model parameters:
+#### Initial model parameters:
+
+For the model to work we will need to generate our students. The total number of students is 126.
 
 The school size is based off of:
+
 - Classroom size = 21 students
 - Number of Classrooms = 6
 
+The other parameters that will be required are:
+- Risk of Infection = 50%
+- Illness Rate (Post Infection) = 10%
+- Incubation period = 2 days
+- Symptomatic (Isolation) period = 3 days
+- School Days per Week = 5 days
+- Weekend Days per Week = 2 days
 
-## Goals 
+#### The connections
 
 Creating Neighbour Networks:
-- In the classroom, each node is given a 60% probability to rewire a connection, this will allow the nodes to pair with their neighbour on either side.
+
+- In the classroom, each person has a 60% probability to rewire a connection on, allowing students to pair with neighbours on either side of the desk.
 
 Creating Friendship Networks:
-- Connections formed with other classrooms are given a 10% chance of rewiring, this allows students to have more friends other than the ones in their classroom only.
 
-The parameters:
+- Connections formed with students outside of the classroom are given a 10% chance of rewiring.
 
-- Group sizes: range 3 - 8.5
-- Average Degree: 4.5
-- Average Path Length: 5.0
-- Clustering Coefficient: 0.113
+### Programme Report
 
-Links between friends:
-- Has to be greater or equal to 2
-
+When the program is complete it will report:
+1. Stabilising results across runs:
+- Outbreak duration (days), this will include data from multiple runs.
+2. Baseline Simulation Results:
+- Duration (days)
+- Duration range (days)
+- Max Absentee Rate 
+- Total Number of Students Affected 
+- Range of students affected across runs
 
 # SPC-engine
-At the start of each simulation the following parameters were randomly assigned: 
+At the start of each simulation the following parameters shall be randomly assigned: 
 
 In order for the simulation to commence there will need to be the initial ‘sick’ student and the network connections of each student should be set up.
 
@@ -68,10 +79,30 @@ The conditions that the model shall meet are as follows:
 
 
 # SPC-model
-The main goal of the model is to generate the students and network so that the model can run and output the report.
 
-- [[.generate_students]]: There shall be a function which generates the students for the model. The setup for this is will require to assign the parameters for the students. 
-- [[.generate_sick_student]]: There will be a function to generate the "initial" sick student.
+The main goal of the model is to generate the students, the network of the students, connecting them to their seatmates, groups and friends, so that the model can run and output the report.
+
+
+- [[.init]]: Initialise the required model parameters.
+
+### [[.generate_students]]: generation of the students
+The students for the model shall be generated. The setup for this is will require to assign the parameters for the students. All the students will be "Healthy", except for the random "Sick" student. 
+
+### [[.generate_sick_student]]: generation of random sick student
+
+To run the simulation and for the model to do what it supposed to, which is spreading infection, an "initial" sick student will be randomly generated to start the infection spread.
+
+### [[.network]]: generation of the student network
+The generation of the student network wil allow for all the connections to be made, within the classroom and outside the classroom.
+
+Evaluating chances of infection:
+
+- Neighbours:
+The probabiltiy of getting infected is 10%.
+
+- Friend: The probabiltiy of getting infected is 12%.
+
+When the students are in their classroom doing group work or at lunch, the chances of them being infected shall be evaluated.
 
 
 # SPC-network
@@ -80,17 +111,21 @@ partof: REQ-SUn-network
 The network shall be based off of a small-world network. There will be 126 nodes in the network, representing the students.
 
 When generating the network, the friendships between the students change with the random generation of each network the overall structure remains consistent across runs.
-- [[.generate_network]]: The network will be generated which will allow to assign the neighbours to each node.
+
+- [[.generate_network]]: Generating a network to connect the students.  The structure should remain consistant while the friendships between the students change with the random generations of each network.
+
 
 The network shall allow students in a classroom to have at least two neighbours besides them to be assigned.
 
 
-# TST-model
-
-
 # TST-network
-## Unit tests
+## Tests
 
-Make sure that the valid connections are being made between students.
+Make sure that the valid connections are being made between students. 
 
-Each student should at least have two links in the classroom.
+
+Students should be randomly assigned friends, there is 10% chance of being wired to someone outside of the class, which should be checked.
+
+In the classroom, each student should at least have two links in the classroom.
+
+In order for this to be "unit tested":
