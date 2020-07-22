@@ -9,7 +9,7 @@ Modelling the transmission of the Norovirus among elementary school classrooms, 
 
 Runs a standard school week, students go to school for five days and then are home for two. 
 
-During the five days at school, students have the chance to become infected with virus by their neighbours (each student has an assigned seat), classroom group work, and during their lunch or recess friends. 
+In the model they run a standard school week, students go to school for five days and then are home for two. The model only includes exposure in the school and not at home or public venues -> only focus  5/7 days and during school time. During the five days at school, students have the chance to become infected with virus by their neighbours (each student has an assigned seat), classroom group work, and during their lunch or recess friends. 
 
 Neighbours and group members have a **10%** chance of becoming sick. However, students in the infected students' friendship network have a slightly increased probability of being infected, **12%**.
 
@@ -38,9 +38,5 @@ Suspends group activities within the class and grade-wide lunches. For policy to
 
 After this the only way of spread is through assigned seat neighbours because the students no longer interact with their group work or friendship networks. 
 
-### Initialising the model
-In the model they run a standard school week, students go to school for five days and then are home for two. The model only includes exposure in the school and not at home or public venues -> only focus  5/7 days and during school time. During the 5 days, the students have a chance of being infected with the virus by their neighbours, students they connect with for group work, and their lunch and recess friends. 
-
-Students 'sick'/'healthy' status is updated at the end of each day, as well as their absentee status. If a student has 'sick' status for 2 days then they are removed from school temporarily. But when they are home they are not considered to spread there, as the model only focuses on school spread. 
 
 
