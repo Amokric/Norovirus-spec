@@ -37,3 +37,10 @@ This policy stops group work between students, thus removing a route of exposure
 Suspends group activities within the class and grade-wide lunches. For policy to be implemented the students would be required to eat in their classrooms to minimise contamination from outside their classroom.  
 
 After this the only way of spread is through assigned seat neighbours because the students no longer interact with their group work or friendship networks. 
+
+### Initialising the model
+In the model they run a standard school week, students go to school for five days and then are home for two. The model only includes exposure in the school and not at home or public venues -> only focus  5/7 days and during school time. During the 5 days, the students have a chance of being infected with the virus by their neighbours, students they connect with for group work, and their lunch and recess friends. 
+
+Students 'sick'/'healthy' status is updated at the end of each day, as well as their absentee status. If a student has 'sick' status for 2 days then they are removed from school temporarily. But when they are home they are not considered to spread there, as the model only focuses on school spread. 
+
+
