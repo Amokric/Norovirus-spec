@@ -104,28 +104,3 @@ The probabiltiy of getting infected is 10%.
 
 When the students are in their classroom doing group work or at lunch, the chances of them being infected shall be evaluated.
 
-
-# SPC-network
-partof: REQ-SUn-network
-###
-The network shall be based off of a small-world network. There will be 126 nodes in the network, representing the students.
-
-When generating the network, the friendships between the students change with the random generation of each network the overall structure remains consistent across runs.
-
-- [[.generate_network]]: Generating a network to connect the students.  The structure should remain consistant while the friendships between the students change with the random generations of each network.
-
-
-The network shall allow students in a classroom to have at least two neighbours besides them to be assigned.
-
-
-# TST-network
-## Tests
-
-Make sure that the valid connections are being made between students. 
-
-
-Students should be randomly assigned friends, there is 10% chance of being wired to someone outside of the class, which should be checked.
-
-In the classroom, each student should at least have two links in the classroom.
-
-In order for this to be "unit tested":
