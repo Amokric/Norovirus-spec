@@ -70,7 +70,7 @@ From the data that is gathered from the runs, this will allow for specific resul
 - Total Number of Students Affected 
 - Range of students affected across runs
 
-![alt text](https://github.com/[Amokric]/[Norovirus-spec]/blob/[master]/img1.jpg?raw=true)
+![alt text](https://github.com/[Amokric]/[Norovirus-spec]/blob/[master]/img1.png? raw=true)
 
 
 # SPC-engine
