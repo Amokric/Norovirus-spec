@@ -14,7 +14,7 @@ This will execute the model given certain conditions.
 partof: REQ-Purpose
 ###
 ## Model
-
+<img width="651" alt="Screenshot 2020-06-08 at 00 48 01" src="https://user-images.githubusercontent.com/33029552/88837923-b9460d00-d1d0-11ea-8cb7-1921403d2857.png">
 
 This initialises the model with all the details need to run the simulation, as well as, generating the agents, generating the network and setting up the connections. 
 
