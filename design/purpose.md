@@ -1,16 +1,17 @@
 # REQ-purpose
 The goal of this project is to develop a reasonable replication of the Norovirus Model from the paper [NOROVIRUS OUTBREAKS: USING AGENT-BASED MODELING TO EVALUATE SCHOOL POLICIES](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7822182).
 
-The paper is about the transmission of a virus among primary school classrooms and seeing how the number of children is infected can be reduced.  It focuses on the daily activities that allow for students’ exposure to the virus including classroom activities and lunch. 
+The model should focus on the transmission of a virus among primary school classrooms and seeing how the number of children infected can be reduced.  
 
-The last process of developing the programme will include mitigation strategies. to control the transmission, two policies were implemented to limit the amount of student-student interaction. The results demonstrated that implementation of either policy helps reduce the number of students who become ill and that the sooner the policy is implemented the shorter the duration of the outbreak.
+The daily activities of the students are looked at and how these activities allow for students’ exposure to the virus including classroom activities and lunch. 
+
+The last process of developing the programme will include implementing mitigation strategies. This will be done by creating two policies which would limit the amount of student-student interaction. The sooner the policy is implemented the shorter the duration of the outbreak.
 
 
 ## Goal
 
 The model should simulate 6 classrooms, containing 21 students per class. 
 
-Simulate the spread of norovirus through a series of elementary school classrooms and implement policies in order to reduce the number of children who become infected. 
 
   ## Structure
   

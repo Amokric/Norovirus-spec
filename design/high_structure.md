@@ -4,17 +4,18 @@ partof: REQ-purpose
 ## Engine
 This will execute the model given certain conditions.
 
-### This model shall meet these conditions to execute the programme:
+### This model should meet these conditions to execute the programme to run:
 - An "initial" sick student, which is randomly assigned, in order to start the actual transmission of disease.
 - The network connections for the students
 - The assigned sizes for the classes and groups.
+
+If these conditions are not met then the model will not do what it is intended to, which is simulate the virus spread correctly.
 
 
 # REQ-model
 partof: REQ-Purpose
 ###
 ## Model
-<img width="651" alt="Screenshot 2020-06-08 at 00 48 01" src="https://user-images.githubusercontent.com/33029552/88837923-b9460d00-d1d0-11ea-8cb7-1921403d2857.png">
 
 This initialises the model with all the details need to run the simulation, as well as, generating the agents, generating the network and setting up the connections. 
 
@@ -32,6 +33,7 @@ The school size is based on:
 
 - Classroom size = 21 students
 - Number of Classrooms = 6
+
 
 The other parameters that will be required are:
 - Risk of Infection = 50%
