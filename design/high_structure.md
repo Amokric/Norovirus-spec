@@ -72,6 +72,7 @@ From the data that is gathered from the runs, this will allow for specific resul
 
 ![alt text](https://github.com/[Amokric]/[Norovirus-spec]/blob/[master]/img1.jpg?raw=true)
 
+
 # SPC-engine
 At the start of each simulation the following parameters shall be randomly assigned: 
 

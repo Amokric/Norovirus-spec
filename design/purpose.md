@@ -17,14 +17,18 @@ Simulate the spread of norovirus through a series of elementary school classroom
 
 - [[ REQ-model]] - The model setup. This will initialise the model with all the details needed to run the simulation, it will include the generation of the students and the network, which allow for the chance of infection to be evaluated between the students.
 - [[ REQ-engine]] - The model will need certain conditions to be executed.
+
+## Setup Agents:
+
 ```dot
 digraph G {
     node [shape=box];
 
-    subgraph cluster_start {
-        {start [label="paths to parse"; shape=oval ]}
-     }
  // join main and branch
 
-    "REQ-model" -> [[SPC-model]];
+     "SPC-DATA-FAMILY" -> "SPC-DATA-ARTIFACT"
+      -> [[SPC-lint]]
+      -> {done [shape=oval]};
 }
+}
+```
