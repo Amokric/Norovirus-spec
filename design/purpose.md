@@ -20,7 +20,7 @@ To produce three data sets that can be compared to the original data within the 
 ## Structure
   
 
-- [[ REQ-model]] - The model setup. This contains the steps and guidance for completion of implementation.
+- [[ SPC-model]] - The model setup. This contains the steps and guidance for completion of implementation.
 
 
 - [[ REQ-engine]] - The model will need certain conditions to be executed.
