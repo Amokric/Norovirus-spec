@@ -23,25 +23,28 @@ This initialises the model with all the details need to run the simulation, as w
 
 #### Network for the model:
 
-According to the paper, the network was created as a small-world network in a lattice structure, allowing the student to pair with their neighbours on either side.
+According to the paper, the network was created as a small-world network, a type of mathematical graph in which most nodes are not neighbors of one another, but the neighbors of any given node are likely to be neighbors of each other and most nodes can be reached from every other node by a small number of hops or steps. The model will be a lattice structure. An example can be seen below:
 
-#### Initial model parameters:
+<img width="253" alt="Screenshot 2020-07-30 at 01 25 23" src="https://user-images.githubusercontent.com/33029552/88866767-8bc68700-d203-11ea-8ab9-aa084c16e26d.png">
+
+#### Model parameters:
 
 For the model to work we will need to generate our students. The total number of students is 126.
 
-The school size is based on:
 
-- Classroom size = 21 students
-- Number of Classrooms = 6
+The Initial Model parameters include: 
 
+Parameter | Value 
+--- | --- 
+Classroom size | 21 students |
+Number of Classrooms | 6
+Risk of Infection | 50%
+Illness Rate (Post Infection) | 10%
+Incubation Period | 2 days
+Symptomatic Period | 3 days
+School Days per Week | 5 days
+Weekend Days per Week | 2 days
 
-The other parameters that will be required are:
-- Risk of Infection = 50%
-- Illness Rate (Post Infection) = 10%
-- Incubation period = 2 days
-- Symptomatic (Isolation) period = 3 days
-- School Days per Week = 5 days
-- Weekend Days per Week = 2 days
 
 #### The connections
 
@@ -72,7 +75,6 @@ From the data that is gathered from the runs, this will allow for specific resul
 - Total Number of Students Affected 
 - Range of students affected across runs
 
-![alt text](https://github.com/[Amokric]/[Norovirus-spec]/blob/[master]/img1.png? raw=true)
 
 
 # SPC-engine
