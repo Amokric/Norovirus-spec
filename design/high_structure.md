@@ -34,17 +34,8 @@ For the model to work we will need to generate our students. The total number of
 
 The Initial Model parameters include: 
 
-Parameter | Value 
---- | --- 
-Classroom size | 21 students |
-Number of Classrooms | 6
-Risk of Infection | 50%
-Illness Rate (Post Infection) | 10%
-Incubation Period | 2 days
-Symptomatic Period | 3 days
-School Days per Week | 5 days
-Weekend Days per Week | 2 days
 
+<img width="374" alt="Screenshot 2020-07-30 at 01 40 34" src="https://user-images.githubusercontent.com/33029552/88867559-b6b1da80-d205-11ea-8a21-fe45d4a33e81.png">
 
 #### The connections
 
