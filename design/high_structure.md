@@ -38,6 +38,19 @@ From the data that is gathered from the runs, this will allow for specific resul
 - Total Number of Students Affected 
 - Range of students affected across runs
 
+Each simulation of the model should be run from 1,000 to 10,000 times. 
+
+#### NetLogo
+
+When running the simulation from NetLogo you need to use the tool, BehaviourSpace. An example of the interface can be seen below, where you set up the amount runs you want to do and what output you want specifically. 
+
+<img width="492" alt="Screenshot 2020-07-30 at 20 02 22" src="https://user-images.githubusercontent.com/33029552/88963322-98002200-d29f-11ea-934e-3f381c51d4d1.png">
+
+This example shows that the simulation was run 4,000 times and was counting the students who were infected. 
+
+#### PanaXea
+
+For the PanaXea model, you can set up a Launcher.py. Here you just iterate through your model.run() however many times you want to and then put the data into a file.
 
 
 # SPC-model
