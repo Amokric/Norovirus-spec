@@ -1,7 +1,7 @@
 # REQ-purpose
-The goal of this project is to develop a reasonable replication of the Norovirus Model from the paper: Norovirus outbreaks: using agent-based modeling to evaluate school policies
+The goal of this project is to develop a reasonable replication of the Norovirus Model from the paper: Norovirus outbreaks: using agent-based modeling to evaluate school policies.
 
-(https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7822182).
+Here is the link to the paper - [Norovirus Paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7822182).
 
 
 

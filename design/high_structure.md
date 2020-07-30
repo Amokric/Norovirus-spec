@@ -20,8 +20,28 @@ The process of this model will follow a daily route to evalute the chances of ex
 ![diagramFlowChat](https://user-images.githubusercontent.com/33029552/88933839-cec24200-d277-11ea-9def-c36845917ec3.jpg)
 
 
-# REQ-model
-partof: REQ-Purpose
+# REQ-output
+partof: REQ-purpose
+###
+What shall be outputted from the programme after it has been run.
+### Programme Report
+
+When the program is complete it shall report:
+1. Stabilising results across runs:
+- Outbreak duration (days), this will include data from multiple runs.
+2. Baseline Simulation Results:
+
+From the data that is gathered from the runs, this will allow for specific results to be acquired for analysis. The results should include:
+- Duration (days)
+- Duration range (days)
+- Max Absentee Rate 
+- Total Number of Students Affected 
+- Range of students affected across runs
+
+
+
+# SPC-model
+partof: REQ-purpose
 ###
 ## Model
 
@@ -148,45 +168,3 @@ You can add onto the interface a Switch for each strategy, if the Switch is 'on'
 
 #### PanaXea commands of interest:
 You can set up boolean attributes, for whether the student is having group work and lunch. These attributes will be set to true, however if the abestentee rate goes up then they will be set to false.
-
-
-# REQ-output
-partof: REQ-purpose
-###
-What shall be outputted from the programme after it has been run.
-### Programme Report
-
-When the program is complete it shall report:
-1. Stabilising results across runs:
-- Outbreak duration (days), this will include data from multiple runs.
-2. Baseline Simulation Results:
-
-From the data that is gathered from the runs, this will allow for specific results to be acquired for analysis. The results should include:
-- Duration (days)
-- Duration range (days)
-- Max Absentee Rate 
-- Total Number of Students Affected 
-- Range of students affected across runs
-
-
-# SPC-engine
-At the start of each simulation the following parameters shall be randomly assigned: 
-
-In order for the simulation to commence, there will need to be the initial ‘sick’ student and the network connections of each student should be set up.
-
-### [[.generate_students]]: generation of the students
-The students for the model shall be generated. The setup for this is will require to assign the parameters for the students. All the students will have the status of "Healthy".
-
-
-### [[.generate_sick_student]]: generation of random sick student
-
-To run the simulation and for the model to do what it supposed to, which is spreading infection, an "initial" sick student will be randomly generated to start the infection spread. The attributes that this student will have are:
-- Status = "Sick"
-- Days since infection = 1
-- Location = School
-
-### [[.network]]: generation of the student network
-The generation of the student network will allows for all the connections to be made, within the classroom and outside the classroom.
-
-
- 
