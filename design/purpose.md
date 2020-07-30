@@ -1,30 +1,28 @@
 # REQ-purpose
-The goal of this project is to develop a reasonable replication of the Norovirus Model from the paper [NOROVIRUS OUTBREAKS: USING AGENT-BASED MODELING TO EVALUATE SCHOOL POLICIES](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7822182).
+The goal of this project is to develop a reasonable replication of the Norovirus Model from the paper: Norovirus outbreaks: using agent-based modeling to evaluate school policies
+
+(https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7822182).
 
 
-The model should focus on the transmission of a virus among primary school classrooms and seeing how the number of children infected can be reduced.  
 
-The daily activities of the students are looked at and how these activities allow for students’ exposure to the virus including classroom activities and lunch. 
+## Purpose of this project
 
-The last step of developing the model will include implementing mitigation strategies. This will be done by creating two policies which would limit the amount of student-student interaction. The sooner the policy is implemented the shorter the duration of the outbreak.
+* The primary purpose of this project is to reproduce the Norovirus model so that it allows for the simulated transmission of Norovirus among six primary school classrooms containing 21 students.
 
-## ABM Model
-It is important to understand 2hen developing an ABM, there are three main elements :
-1. A set of agents: For this case, the set of agents will represent the students. 
-2. A set of agent relationships and methods of interaction: the relationships between the students and their friends and neighbours. 
-3. Agents’ environment: for this papers case as the agents do not move, but their envionment can be seen as their location attribute being in school. 
-
-It is important to remember that for this model, the students only have the chance of getting infected whilst they are at school, so if it is the weekend then there is no risk of exposure.
+* The secondary purpose of this project is to  implement the mitigation strategies described within the publication into the replicated model to produce results that can then be compared to the original results.
 
 
-## Goal
+## Goals of this project
 
-The model should simulate 6 classrooms, containing 21 students per class and then evaluate the chances of infection depending on if the students are next to their neighbours, doing group work or having lunch with friends.  
+To produce three data sets that can be compared to the original data within the publication to perform analysis of similarities between the replicated model and the original.
 
 
 ## Structure
   
 
-- [[ REQ-model]] - The model setup. This will initialise the model with all the details needed to run the simulation, it will include the generation of the students and the network, which allow for the chance of infection to be evaluated between the students.
+- [[ REQ-model]] - The model setup. This contains the steps and guidance for completion of implementation.
+
+
 - [[ REQ-engine]] - The model will need certain conditions to be executed.
+
 - [[ REQ-output]] - The model output, the results required to evaluate the replicated models results and then compare with the results from the paper.
