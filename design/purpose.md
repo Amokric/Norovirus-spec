@@ -23,6 +23,6 @@ To produce three data sets that can be compared to the original data within the 
 - [[ SPC-model]] - The model setup. This contains the steps and guidance for completion of implementation.
 
 
-- [[ REQ-engine]] - The model will need certain conditions to be executed.
+- [[ REQ-engine]] - The model will need certain parameters and follow a process of evaluation to be executed.
 
 - [[ REQ-output]] - The model output, the results required to evaluate the replicated models results and then compare with the results from the paper.
