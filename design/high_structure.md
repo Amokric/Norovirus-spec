@@ -3,6 +3,7 @@ partof: REQ-purpose
 ###
 ## Engine
 
+Here we focus on what are the initial paramters we need to have to run our model, such as the the amount of students per class or the length of the isolation period. These parameters then contribute towards the model process and the information from SPC-model.
 ### Model parameters:
 
 For the model to work we will need to generate our students. The total number of students is 126.
@@ -15,7 +16,7 @@ The Initial Model parameters include:
 
 ### The Model Process
 
-The process of this model will follow a daily route to evalute the chances of exposure for the students. 
+The process of this model will follow a daily route to evalute the chances of exposure for the students. At the end of each day we update the status of our students health status, which is then checked again at the beginning of the next day, if our student is symptomatic, then they are sent back home and the other students proceed with their day evaluation. 
 
 ![diagramFlowChat](https://user-images.githubusercontent.com/33029552/88933839-cec24200-d277-11ea-9def-c36845917ec3.jpg)
 
