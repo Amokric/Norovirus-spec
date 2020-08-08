@@ -195,20 +195,36 @@ Graphs work by generating a set of nodes and generating the edges. The main idea
 # TST-model_disease
 ## Test Disease Spread
 
-Check:
+- Pass test: For the agents to be exposed to the virus, they need to be in school. 
 
-- For the agents to be exposed to the virus, they need to be in school. During the weekend there should be no disease spread. 
+- Fail test: If a student gets exposed over the weekend, then it is a fail. During the weekend there should be no disease spread. 
+
+- Pass test: The student goes through a 2 day incubation period.
+- Pass test: Students who are infectious should only infect other students during the 2 day incubation period, after that, they are home.
+- Pass test: After 2 days incubation period, the student enters 3 day isolation period, their location should be "Home"
 
 
-- To test if the disease spread is correct, the total duration of the disease should be 5 days per student who is infected.
+- Pass test: The total duration of the disease should be 5 days per student who is infected.
 
-- The students who are infectious can only infect other students during the 2 day incubation period, after that, they are home.
+#### Important to check:
 
-- If someone is infected on Friday, then they will start their incubation period on Saturday, when Monday comes the infected student should have entered their isolation period, meaning that no matter how many students get infected on Friday, the disease outbreak will completely finish after 5 days. By Thursday the students infected would have all become healthy again.
+If someone is infected on Friday, then they will start their incubation period on Saturday. When Monday comes the infected student should have entered their isolation period. This means no matter how many students get infected on Friday, the total disease outbreak for the simulation will completely finish after 5 days starting Saturday when their incubation period begins. By Thursday the students infected would have all become healthy again ending the simulation.
 
 
 # TST-model_network
-#### An example finished network
+## Testing Model Network 
+
+All students need to be generated and split into classrooms, the test must check:
+- Pass test: There should be 126 agents in this model
+- Pass test: 21 students per class equating to 6 classrooms
+
+When generating the network that connects the students to each other, you need to check:
+- Pass test: students should have > 2 seat neighbours
+
+
+#### An example finished network 
+
+This provides an idea of how the network connections between the agents should be generated. There are 6 classrooms, holding 21 agents in each. The agents all have their seat neighbours and group members within the class. 
 
 ![network-edit](https://user-images.githubusercontent.com/33029552/88955574-00e19d00-d294-11ea-9bd8-7cfb25b3ff55.png)
 
@@ -218,5 +234,6 @@ partof: REQ-output
 ###
 The test output is to help see if we are meeting the requirements for what the model should be accurately outputting to us. 
 
-- If the model only runs for 2 days, this could be that it is only taking into account the 2 days of incubation period and not the 3 days of isolation that the student needs to complete. It is important to make sure that the disease duration is lasting 5 days and nothing less than that.
-- If the model run is lasting longer than 10 days from the results, something is incorrect.
+- Pass test: The disease outbreak duration is 5 days. It is important to make sure that it lasts 5 days and nothing less than that.
+- Fail test: If the model only runs for 2 days, this could be that it is only taking into account the 2 days of incubation period and not the 3 days of isolation that the student needs to complete. 
+- Fail test: If the model run is lasting longer than 10 days from the results, something is incorrect.
