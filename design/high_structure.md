@@ -6,20 +6,24 @@ partof: REQ-purpose
 The requirements for the model will outline what the model must do to reach the goals defined in the REQ-purpose. 
 
 In order to run the model and produce the results wanted, it should have:
-- Agents with attributes and behaviours
+- Agents with attributes and behaviours, this includes giving the student agents health statuses to help track disease progression.
 - Agent environment
-- Agent connections and relationships
+- Connections and relationships between the agents
 
-The main conceptual objects for the model have their own specifications and they are listed below:
+To meet the requirements needed to run the correct implementation of the model, we will have to initialise the main conceptual objects which make up the model. The main conceptual objects for the model have their own specifications and they are listed below:
 
 1. [[SPC-model_agents]] - Initialise agents within the model.
-2. [[SPC-model_network]] - Set up the networks between the students
+2. [[SPC-model_network]] - Initialise the network and set up the networks between the students
 3. [[SPC-model_disease]] - Initialise the disease within the model and set up the disease progression
-4. [[SPC-model_background]] - Initialise the model baseline and then setup the mitigation strategies as options within the model
+4. [[SPC-model_background]] - Initialise the model baseline and then setup the mitigation strategies as options within the model.
+
+### Intervention/ Mitigation 
+
+ It is important to understand that the interventions are different than the base model. Only after you have implemented the baseline requirements and met the specifications for generating and initialising the agents, network and disease should you implement them. As the interventions can only work when the general requirements are fulfilled.
 
 ### The Model Process
 
-The process of this model should follow a daily route to evaluate the chances of exposure for the students. At the end of each day, we update the status of our students' health status, which is then checked again at the beginning of the next day, if our student is symptomatic, then they are sent back home and the other students proceed with their day evaluation. 
+The process of this model should follow a daily route to evaluate the chances of exposure for the students. At the end of each day, we update the status of our students' health status, which is then checked again at the beginning of the next day, if our student is symptomatic, then they are sent back home and the other students proceed with their day evaluation. The image below is to provide an idea of how the model should work as it goes through each step.
 
 ![diagramFlowChat](https://user-images.githubusercontent.com/33029552/88933839-cec24200-d277-11ea-9def-c36845917ec3.jpg)
 
@@ -31,9 +35,9 @@ What shall be outputted from the programme after it has been run.
 ### Programme Report
 
 When the program is complete it shall report:
-1. Stabilising results across runs:
+#### 1. Stabilising results across runs:
 - Outbreak duration (days), this will include data from multiple runs.
-2. Baseline Simulation Results:
+#### 2. Baseline Simulation Results:
 
 From the data that is gathered from the runs, this will allow for specific results to be acquired for analysis. The results should include:
 - Duration (days)
@@ -41,6 +45,8 @@ From the data that is gathered from the runs, this will allow for specific resul
 - Max Absentee Rate 
 - Total Number of Students Affected 
 - Range of students affected across runs
+
+
 
 #### NetLogo
 
@@ -63,11 +69,17 @@ partof: REQ-model
 The Agents of the model will need to be initialised with three user-defined attributes.
 
 This will include:
-- Their status - susceptible, infected, recovered
+- Their status - "Healthy", "Sick", "Absent", "Recovered"
 - Days of infection
 - Location - School or Home 
 
+The model parameters can be found in: [[SPC-model_background]]
+
 In total there should 126 agents within the model each split into six classrooms, of 21 students per class.
+
+The location will allow for the weekdays and weekends to be initiated. When it is the weekend, the students are at the location, Home. Otherwise, they are at school.
+
+When a student has surpassed the 2 days of incubation period they will enter the isolation period, where their location will have to be Home for 3 days. 
 
 #### NetLogo commands of interest:
 
@@ -232,6 +244,7 @@ This provides an idea of how the network connections between the agents should b
 # TST-output
 partof: REQ-output
 ###
+## Test Output
 The test output is to help see if we are meeting the requirements for what the model should be accurately outputting to us. 
 
 - Pass test: The disease outbreak duration is 5 days. It is important to make sure that it lasts 5 days and nothing less than that.
