@@ -47,18 +47,13 @@ From the data that is gathered from the runs, this will allow for specific resul
 - Range of students affected across runs
 
 
+### Understanding the results
 
-#### NetLogo
+According to the paper, the average duration of the simulation is 22 days.
 
-When running the simulation from NetLogo you need to use the tool, BehaviourSpace. An example of the interface can be seen below, where you set up the amount runs you want to do and what output you want specifically. 
+However, the results based off of the paper, seem to contradict the logic behind the disease progression. If someone has acquired infection on a Friday, then they begin their incubation period on Saturday. On Monday the sick student would have entered the isolation period, which would conclude by Thursday, where the student will return to school healthy again. 
 
-<img width="492" alt="Screenshot 2020-07-30 at 20 02 22" src="https://user-images.githubusercontent.com/33029552/88963322-98002200-d29f-11ea-934e-3f381c51d4d1.png">
-
-This example shows that the simulation was run 4,000 times and was counting the students who were infected. 
-
-#### PanaXea
-
-For the PanaXea model, you can set up a Launcher.py. Here you just iterate through your model.run() however many times you want to and then put the data into a file.
+As mentioned in [[SPC-model_disease]], the students can only be exposed to the disease during the weekdays when they are at school. Therefore, no matter how many students acquire the infection on Friday, the disease outbreak for the simulation cannot last longer than 10 days based off of this logic.
 
 
 # SPC-model_agents
@@ -204,6 +199,25 @@ For generating the network, you can use NetworkX, which is a Python library for 
 Graphs work by generating a set of nodes and generating the edges. The main idea is that when the graph is generated, for each node on it, it represents a student. So for each node in nodes, a student will be appended to it. Once you have the nodes initialised with the students then you generate the graph from those nodes.
 
 
+# SPC-output
+### Outputting
+
+Alongside outputting the results correctly. An important process of acquiring the results from the model is understanding if the output we are getting is correct. If the duration of the simulation is going over 30 days then something is wrong. 
+
+
+#### NetLogo
+
+When running the simulation from NetLogo you need to use the tool, BehaviourSpace. An example of the interface can be seen below, where you set up the amount runs you want to do and what output you want specifically. 
+
+<img width="492" alt="Screenshot 2020-07-30 at 20 02 22" src="https://user-images.githubusercontent.com/33029552/88963322-98002200-d29f-11ea-934e-3f381c51d4d1.png">
+
+This example shows that the simulation was run 4,000 times and was counting the students who were infected. 
+
+#### PanaXea
+
+For the PanaXea model, you can set up a Launcher.py. Here you just iterate through your model.run() however many times you want to and then put the data into a file.
+
+
 # TST-model_disease
 ## Test Disease Spread
 
@@ -242,8 +256,6 @@ This provides an idea of how the network connections between the agents should b
 
 
 # TST-output
-partof: REQ-output
-###
 ## Test Output
 The test output is to help see if we are meeting the requirements for what the model should be accurately outputting to us. 
 
